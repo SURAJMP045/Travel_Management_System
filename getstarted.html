@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started Page</title>
+    <style>
+    nav img{
+        margin:30px;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url(img3.avif);
+        background-size: cover;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+    
+    .content {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    h1 {
+        color: #333;
+    }
+    
+    p {
+        color: #272727;
+        margin-bottom: 20px;
+    }
+    
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .learnmore button{
+        background-color: white;
+        color:black;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    .glassy-effect {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    width: 750px; /* Adjust width as needed */
+    height: 350px; /* Adjust height as needed */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Adjust the opacity here */
+    backdrop-filter: blur(10px); /* Adjust the blur effect here */
+    border-radius: 10px; /* Adjust border radius as needed */
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="travellogo.png" style="height: 100px;">
+    </nav>
+    <div class="glassy-effect">
+        <div class="container">
+            <div class="info-container">
+            <h1>Welcome to Shree devi tours and travellers!</h1>
+            <p>"Adventure is worthwhile."</p>
+            <p>Travel makes one modest. You see what a tiny place you occupy in the world.</p>
+            <a href="aboutus.html"><button class="learnmore">Learn More</button></a>
+            <a href="login.php"><button href id="getStartedBtn" >Get Started</button></a>
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

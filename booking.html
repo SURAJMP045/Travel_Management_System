@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onlinebooking</title>
+    <style>
+.secondnav img{
+  margin-left: 40px;
+  margin-top: 30px;
+}
+h1{
+    margin: auto;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top:30px;
+}
+body{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(feedback.jpg);
+}
+
+form{
+  margin-top: -40px;
+}
+input{
+  border:2px solid black;
+}
+    .container {
+      background-color: #e0dfdf;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      width: 700px;
+      margin-bottom:50px ;
+      margin-left: 380px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    </style>
+</head>
+<body>
+  <div class="secondnav">
+    <img src="travellogo.png" style="height: 65px;">
+  </div>
+    <div class="container">
+        <h2>Tour Booking Form</h2><br><br>
+        <form id="tourForm" method="POST" action="booking.php">
+          <label for="tourCode">Tour ID:</label>
+          <input type="text" id="tourid" name="tourid" required>
+      
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="username" required>
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+      
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+      
+          <label for="departureDateTime">Departure Date/Time:</label>
+          <input type="date" id="departureDateTime" name="departime" required>
+      
+          <label for="returnDateTime">Return Date/Time:</label>
+          <input type="date" id="returnDateTime" name="returntime" required>
+      
+          <label for="pickupAddress">Pickup Address:</label>
+          <input type="text" id="pickupAddress" name="pickaddress" required>
+      
+          <label for="dropAddress">Drop Address:</label>
+          <input type="text" id="dropAddress" name="dropaddress" required>
+      
+          <label for="vehicleType">Vehicle Type:</label>
+          <select id="vehicleType" name="vehicletype" required>
+            <option value="omini">omini</option>
+            <option value="suv">SUV</option>
+            <option value="tavera">tavera</option>
+            <option value="van">Van</option>
+            <option value="TT">TT</option>
+          </select>
+      
+          <label for="passengers">Number of Passengers:</label>
+          <input type="number" id="passengers" name="passengers" min="1" required>
+      
+          <label for="additionalMessage">Additional Message:</label>
+          <textarea id="additionalMessage" name="addmessage" rows="4"></textarea>
+      
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+</body>
+</html>
