@@ -2,11 +2,8 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rating = isset($_POST["rating"]) ? $_POST["rating"] : null;
 
-    // Perform further processing or database insertion here
-    // For now, let's just print the selected rating
     echo "You rated us: $rating";
 } else {
-    // Redirect to the form page if accessed directly
     header("Location: index.html");
 }
 ?>

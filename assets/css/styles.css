@@ -253,19 +253,19 @@ section {
     margin-left: 150px;
     }
 .card1{
-    background-image: url(Andaman1.jpg);
+    background-image: url(../assets/images/Andaman1.jpg);
   }
 .card2{
-    background-image: url(Himachal1.jpg);
+    background-image: url(../assets/images/Himachal1.jpg);
   }
   .card3{
-    background-image: url(Kerala-trn-img.jpg);
+    background-image: url(../assets/images/Kerala-trn-img.jpg);
   }
   .card4{
-    background-image: url(Kashmir.jpg);
+    background-image: url(../assets/images/Kashmir.jpg);
   }
   .card5{
-    background-image: url(Gujarat-trn-img.jpg);
+    background-image: url(../assets/images/Gujarat-trn-img.jpg);
   }
   .card:hover{
     transform: translate(-10px);
@@ -291,22 +291,22 @@ section {
     padding: 10px 10px 0px 10px;
   }
   .card6{
-    background-image: url(Dubai.jpg);
+    background-image: url(../assets/images/Dubai.jpg);
   }
   .card7{
-    background-image: url(Japan-Banner.jpg);
+    background-image: url(../assets/images/Japan-Banner.jpg);
   }
   .card8{
-    background-image: url(South-Africa-Trnd.jpg);
+    background-image: url(../assets/images/South-Africa-Trnd.jpg);
   }
   .card9{
-    background-image: url(Thailand.jpg);
+    background-image: url(../assets/images/Thailand.jpg);
   }
   .card0{
-    background-image: url(Vietnam.jpg);
+    background-image: url(../assets/images/Vietnam.jpg);
   }
   #offers{
-  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../assets/images/images.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 0.9%;
@@ -322,19 +322,19 @@ section {
     display: inline-flex;
   }
   .card11{
-    background-image: url(Spiritual-Tour1.jpg);
+    background-image: url(../assets/images/Spiritual-Tour1.jpg);
   }
   .card12{
-    background-image: url(amazingholiday.jpg);
+    background-image: url(../assets/images/amazingholiday.jpg);
   }
   .card13{
-    background-image: url(India-Honeymoon-SOTC-Special.jpg);
+    background-image: url(../assets/images/India-Honeymoon-SOTC-Special.jpg);
   }
   .card14{
-    background-image: url(International-Honeymoon-sotc-Special.jpg);
+    background-image: url(../assets/images/International-Honeymoon-sotc-Special.jpg);
   }
   .card15{
-    background-image: url(freeinternational.jpg);
+    background-image: url(../assets/images/freeinternational.jpg);
   }
 
 #feedback{
@@ -731,3 +731,69 @@ textarea {
 .login .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
+
+/* Remove all commented code and add responsive improvements */
+@media screen and (max-width: 1000px) {
+  .pictures, .pictures1 {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+  .card, .card11, .card12, .card13, .card14, .card15 {
+    width: 90vw;
+    margin: 10px 0;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .secondnav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 600px) {
+  header, .firstnav, .secondnav, nav, .search-container {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100vw;
+  }
+  .btn, #booking {
+    width: 100%;
+    margin-left: 0;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .secondnav img {
+    margin-left: 0;
+    width: 120px;
+    height: auto;
+  }
+  .card, .card11, .card12, .card13, .card14, .card15 {
+    width: 95vw;
+    height: auto;
+    padding: 10px;
+  }
+  .contact-para, .contact-input {
+    width: 100%;
+    padding: 10px;
+  }
+}
+/* Update all background-image URLs to ../assets/images/ */
+.card1{background-image:url(../assets/images/Andaman1.jpg);}
+.card2{background-image:url(../assets/images/Himachal1.jpg);}
+.card3{background-image:url(../assets/images/Kerala-trn-img.jpg);}
+.card4{background-image:url(../assets/images/Kashmir.jpg);}
+.card5{background-image:url(../assets/images/Gujarat-trn-img.jpg);}
+.card6{background-image:url(../assets/images/Dubai.jpg);}
+.card7{background-image:url(../assets/images/Japan-Banner.jpg);}
+.card8{background-image:url(../assets/images/South-Africa-Trnd.jpg);}
+.card9{background-image:url(../assets/images/Thailand.jpg);}
+.card0{background-image:url(../assets/images/Vietnam.jpg);}
+.card11{background-image:url(../assets/images/Spiritual-Tour1.jpg);}
+.card12{background-image:url(../assets/images/amazingholiday.jpg);}
+.card13{background-image:url(../assets/images/India-Honeymoon-SOTC-Special.jpg);}
+.card14{background-image:url(../assets/images/International-Honeymoon-sotc-Special.jpg);}
+.card15{background-image:url(../assets/images/freeinternational.jpg);}
+#offers{background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../assets/images/images.jpg);}

@@ -10,7 +10,6 @@
         background-size: cover;
         background-position: center;
         justify-content: center;
-        /* display:flex; */
         align-items: center;
         }
     .container {
@@ -73,7 +72,7 @@
     <div class="container">
       
         <center class="center"><h1>USER LOGIN </h1></center>
-        <form id="tourForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <form id="tourForm" method="post" action="?php echo $_SERVER['PHP_SELF']; ?">
             <label for="name">Name :</label>
             <input type="text" id="name" name="username" placeholder="username" required>
           
@@ -89,7 +88,7 @@
             <br>
             <br><hr><br>
     
-            <center><li><p>Not yet a user?</P><u><a href="signup.php">Sign up here<u></a></li></center>
+            <center><li><p>Not yet a user?</P><u><a href="signup.html">Sign up here<u></a></li></center>
         </form>
     </div>
     

@@ -35,30 +35,33 @@ function submitRating() {
       alert("Please select a rating before submitting.");
   }
 }
-document.getElementById('getStartedBtn').addEventListener('click', function() {
-  alert('Let\'s get started!');
-});
+if(document.getElementById('getStartedBtn')){
+  document.getElementById('getStartedBtn').addEventListener('click', function() {
+    alert('Let\'s get started!');
+  });
+}
 
 
 document.addEventListener("DOMContentLoaded", function () {
   var contactForm = document.getElementById("contactForm");
   var confirmationMessage = document.getElementById("confirmation-message");
-
-  contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-      var formData = new FormData(contactForm);
-      fetch("process_contact.php", {
-          method: "POST",
-          body: formData
-      })
-      .then(response => response.text())
-      .then(data => {
-          confirmationMessage.innerHTML = data;
-      })
-      .catch(error => {
-          console.error("Error:", error);
-      });
-  });
+  if(contactForm && confirmationMessage){
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var formData = new FormData(contactForm);
+        fetch("process_contact.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            confirmationMessage.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    });
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -67,21 +70,27 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(response => response.json())
       .then(data => {
           const userListElement = document.getElementById('user-list');
-          userListElement.innerHTML = '';
-          data.forEach(user => {
-              const listItem = document.createElement('div');
-              listItem.textContent = user.name; 
-              userListElement.appendChild(listItem);
-          });
+          if(userListElement){
+            userListElement.innerHTML = '';
+            data.forEach(user => {
+                const listItem = document.createElement('div');
+                listItem.textContent = user.name; 
+                userListElement.appendChild(listItem);
+            });
+          }
       });
   }
   fetchUserList();
-  document.querySelector('.add-user-button').addEventListener('click', function() {
-      console.log('Add User button clicked');
-  });
-  document.querySelector('.delete-user-button').addEventListener('click', function() {
-      console.log('Delete User button clicked');
-  });
+  if(document.querySelector('.add-user-button')){
+    document.querySelector('.add-user-button').addEventListener('click', function() {
+        console.log('Add User button clicked');
+    });
+  }
+  if(document.querySelector('.delete-user-button')){
+    document.querySelector('.delete-user-button').addEventListener('click', function() {
+        console.log('Delete User button clicked');
+    });
+  }
 });
 
 
