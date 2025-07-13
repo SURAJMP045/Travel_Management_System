@@ -7,10 +7,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
-     <!--=============== SWIPER CSS ===============-->
      <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
 
     <title>www.shreedevitravellers.com</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 200px;
+        }
+        
+        #home {
+            margin-top: 20px;
+        }
+        
+        .slideshow-container {
+            margin-top: 20px;
+        }
+
+        /* Footer Styles */
+        .footer__container {
+            background-color: #333;
+            color: #f2f2f2;
+            padding: 40px 0 20px 0;
+            margin-top: 50px;
+        }
+
+        .footer__data {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            margin: 0 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer__content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 40px;
+        }
+
+        .footer__title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .footer__description {
+            margin-bottom: 15px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .footer__social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer__social-link {
+            color: #fff;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer__social-link:hover {
+            color: #007bff;
+        }
+
+        .footer__links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer__links li {
+            margin-bottom: 10px;
+        }
+
+        .footer__link {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer__link:hover {
+            color: #007bff;
+        }
+
+        .footer__rights {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-top: 1px solid #555;
+            margin-top: 20px;
+        }
+
+        .footer__copy p {
+            color: #ccc;
+            margin: 0;
+        }
+
+        .footer__terms {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer__terms-link {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer__terms-link:hover {
+            color: #007bff;
+        }
+
+        /* Responsive Footer */
+        @media screen and (max-width: 768px) {
+            .footer__content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .footer__data {
+                margin: 0 20px;
+            }
+            
+            .footer__rights {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .footer__container {
+                padding: 30px 0 15px 0;
+            }
+            
+            .footer__data {
+                margin: 0 15px;
+            }
+            
+            .footer__rights {
+                padding: 15px 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -23,7 +167,7 @@
                     <li><i class="fa fa-home" style="color: red;"></i><a href="https://maps.app.goo.gl/BDZ3EAMExXeW2Rcd9">Store location</a></li>
                 </ul>
                 <div class="login">
-                    <a href="getstarted.html" target="_blank" class="btn" action="logout.php" method="post">Logout</a>
+                    <a href="getstarted.html" target="_blank" class="btn" action="logout.php" method="post"><h3>Logout</h3></a>
                 </div>
 
             </nav>
@@ -36,7 +180,7 @@
         <nav>
             <ul>
                 <li><a href="#home">HOME</a></li>
-                <li><a href="aboutus.html" target="_blank">ABOUT US</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
                 <li><a href="#destination">DESTINATIONS</a></li>
                 <li><a href="#offers">OFFERS</a></li>
                 <li><a href="#feedback">Feedback</a></li>
@@ -49,6 +193,7 @@
         <a href="booking.html" target="_blank"><button id="booking"><h3>BOOK NOW</h3></button></a>
     </div>
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/animations.js"></script>
 
     <section id="home">
         <div id="slideshow-container">
@@ -77,8 +222,8 @@
                     <img src="../assets/images/5thimage.jpg" style="width:100%">
                     </div>
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-chevron-left"></i></a>
+            <a class="next" onclick="plusSlides(1)"><i class="fa fa-chevron-right"></i></a>
           </div>
           <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -92,33 +237,33 @@
             <h1>Trending Indian Destinations</h1>
             <div id="content">
             <p>India is a beautiful land of rich diversity, culture and adventures. It is the seventh-largest country in the world, home to some of the most wonderful and breathtaking holiday destinations. From beautiful islands and green valleys to vast deserts and snowy hill stations, 
-                a lot to uncover while selecting a travel destination in this South Asian country. <span id="dots">...</span><span id="more"><br>
+                a lot to uncover while selecting a travel destination in this South Asian country. <span id="dots1">...</span><span id="more1"><br>
                 Our India Tour Packages are professionally picked to offer tourists the vacation they are looking for. 
                 Starting with the mesmerising snow-clad mountains of the Himalayan range that takes up the northeastern section of the country, including Jammu and Kashmir, Himachal Pradesh, Ladakh, Uttarakhand, Sikkim, and so on. Besides phenomenal panoramic views of the region, these locations are also ideal for individuals looking for thrilling winter sports and other adventure activities.
                 Next on the list of popular trending holiday destinations in India is Rajasthan, where tourists can not only enjoy the Great Indian Desert but also catch a glimpse of the remarkable royal history of the region through forts, palaces, temples, and so on. Gujarat is yet another well-known vacation spot that offers individuals a diverse tourism experience in the form of temples, national parks, historical landmarks, hill stations, and the most notable, the Rann of Kutch. While for the ultimate cultural, 
                 hopping, spiritual, culinary, and historical extravaganza, places like West Bengal, Andhra Pradesh, Telangana and Kerala are among the most preferred holiday destinations within India. As a peninsula, the country shares its border with the Indian Ocean,
-                the Bay of Bengal and the Arabian Sea, making it an ideal getaway for beachside holidays. Places like Goa and the Andaman and Nicobar Islands offer tourists some of the world’s most spectacular beaches, like Radhanagar Beach, Elephant Beach, Baga Beach, Palolem Beach, etc. These versatile locations are also known for their unique culture and traditions, shopping aspect, historical monuments, regional festivals, and religious landmarks.
-                No matter the criteria of your perfect vacation, you can find just the right place to spend a memorable time in the country. So make sure to browse through our India Holiday Tour Packages and book your next trip for an unforgettable vacation.</span></p><button onclick="myFunction()" id="myBtn">Read more</button>   
+                the Bay of Bengal and the Arabian Sea, making it an ideal getaway for beachside holidays. Places like Goa and the Andaman and Nicobar Islands offer tourists some of the world's most spectacular beaches, like Radhanagar Beach, Elephant Beach, Baga Beach, Palolem Beach, etc. These versatile locations are also known for their unique culture and traditions, shopping aspect, historical monuments, regional festivals, and religious landmarks.
+                No matter the criteria of your perfect vacation, you can find just the right place to spend a memorable time in the country. So make sure to browse through our India Holiday Tour Packages and book your next trip for an unforgettable vacation.</span></p><button onclick="myFunction1()" id="myBtn1">Read more</button>   
                 </div>
     </div>
     <div class="pictures">
-        <div class="card card1">
+        <div class="test-card" style="background-image: url(../assets/images/Andaman1.jpg);">
             <h4>Andaman</h4>
             <p>Starting prize <br> 16,900/-<br>#codeAnda01</p>
         </div>
-        <div class="card card2">
+        <div class="test-card" style="background-image: url(../assets/images/Himachal1.jpg);">
             <h4>Himachal</h4>
             <p>Starting prize <br> 12,900/-<br>#codeHima02</p>
         </div>
-        <div class="card card3">
+        <div class="test-card" style="background-image: url(../assets/images/Kerala-trn-img.jpg);">
             <h4>Kerala</h4>
             <p>Starting prize <br> 11,800/-<br>#codekrla03</p>
         </div>
-        <div class="card card4">
+        <div class="test-card" style="background-image: url(../assets/images/Kashmir.jpg);">
             <h4>Kashmir</h4>
             <p>Starting prize <br> 26,700/-<br>#codekshm04</p>
         </div>
-        <div class="card card5">
+        <div class="test-card" style="background-image: url(../assets/images/Gujarat-trn-img.jpg);">
             <h4>Gujarat</h4>
             <p>Starting prize <br> 16,900/-<br>#codegujt05</p>
         </div>
@@ -126,7 +271,7 @@
 
     <h1>Trending International Destinations</h1>
             <div id="content">
-            <p>An international holiday not only offers a breath of fresh air but is also a great way to explore different parts of the world and get a new perspective on life. The holiday packages offered by SOTC include various popular vacation spots around the globe that meets a wide range of travel requirements.  <span id="dots">...</span><span id="more"><br>
+            <p>An international holiday not only offers a breath of fresh air but is also a great way to explore different parts of the world and get a new perspective on life. The holiday packages offered by SOTC include various popular vacation spots around the globe that meets a wide range of travel requirements.  <span id="dots2">...</span><span id="more2"><br>
                 Whether it is spending a few days amidst massive mountains hunting for sceneries or sunbathing along the golden sandy beach while munching on seafood, just pick your desired travel destination and SOTC international tour package and get ready for an experience of a lifetime. 
                Bali in Indonesia is an alluring international holiday destination popular among Indians.
                 It is the only Hindu-majority province in the region, known for its magnificent scenic landscapes and diverse culture.
@@ -136,28 +281,28 @@
                   the tourism experience that Dubai offers remains unmatched to this date. This luxurious city boasts its impressive collection of colossal skyscrapers, massive shopping malls, iconic buildings, famous waterparks and so on. Some other renowned Asian holiday destinations you can add to your international trip plan include Thailand, Vietnam, South Korea, Maldives, etc. Europe is also a treasure trove of popular holiday locations, with places like France, Germany, Greece, Spain, the United Kingdom, etc., topping the list. 
                   Whether you want to gaze at the breathtaking northern lights in Finland, ride the Venice water taxi, bike along the Amsterdam canals or spend a romantic honeymoon in Greece, going with a European destination for your next international holiday is always a great move. While other renowned international spots like South Africa, the USA, Canada, Brazil, etc., cater towards more versatile holiday needs. These locations are perfect for tourists looking to include aspects of a diverse nature, culture, history and modernisation into their travel plans. 
                   These are just a few examples of what you can expect from the range of international tour packages that we offer.
-                </span></p><button onclick="myFunction()" id="myBtn">Read more</button>
+                </span></p><button onclick="myFunction2()" id="myBtn2">Read more</button>
         </div>
     </div>
     
     <div class="pictures">
-        <div class=" card card6">
+        <div class="test-card" style="background-image: url(../assets/images/Dubai.jpg);">
             <h4>Dubai</h4>
             <p>Starting prize <br> 66,900/-<br>#codeDubi06</p>
         </div>
-        <div class="card card7">
+        <div class="test-card" style="background-image: url(../assets/images/Japan-Banner.jpg);">
             <h4>Japan</h4>
             <p>Starting prize <br> 1,12,900/-<br>#codejapn07</p>
         </div>
-        <div class="card card8">
+        <div class="test-card" style="background-image: url(../assets/images/South-Africa-Trnd.jpg);">
             <h4>South Africa</h4>
             <p>Starting prize <br> 41,800/-<br>#codeSACA08</p>
         </div>
-        <div class="card card9">
+        <div class="test-card" style="background-image: url(../assets/images/Thailand.jpg);">
             <h4>Thailand</h4>
             <p>Starting prize <br> 46,700/-<br>#codeTHAI09</p>
         </div>
-        <div class="card card0">
+        <div class="test-card" style="background-image: url(../assets/images/Vietnam.jpg);">
             <h4>Vietnam</h4>
             <p>Starting prize <br> 36,900/-<br>#codeVITm00</p>
         </div>
@@ -166,29 +311,65 @@
     <div id="offers">
     <h1>Shreedevi Travellers Special Offers </h1>
     <div class="pictures1">
-        <div class=" card card11">
+        <div class="test-card" style="background-image: url(../assets/images/Spiritual-Tour1.jpg);">
             <h4>Spiritual Tour</h4>
             <p>Starting prize <br> 26,900/-<br>#codeSpcl11</p>
         </div>
-        <div class="card card12">
+        <div class="test-card" style="background-image: url(../assets/images/amazingholiday.jpg);">
             <h4>Amazing holiday</h4>
             <p>Starting prize <br> 1,14,900/-<br>#codeAMZH12</p>
         </div>
-        <div class="card card13">
+        <div class="test-card" style="background-image: url(../assets/images/India-Honeymoon-SOTC-Special.jpg);">
             <h4>India honeymoon packages</h4>
             <p>Starting prize <br> 49,800/-<br>#codeINDH13</p>
         </div>
-        <div class="card card14">
+        <div class="test-card" style="background-image: url(../assets/images/International-Honeymoon-sotc-Special.jpg);">
             <h4>International honeymoon packages</h4>
             <p>Starting prize <br> 46,700/-<br>#codeIRTH14</p>
         </div>
-        <div class="card card15">
+        <div class="test-card" style="background-image: url(../assets/images/freeinternational.jpg);">
             <h4>BUY one get one free International Tour</h4>
             <p>Starting prize <br> 36,900/-<br>#codefree15</p>
         </div>
     </div>
     </div>
     <!-------Contact-section------->
+    
+
+
+    <!-- Featured Destinations with Images -->
+    <section class="featured-destinations">
+        <h1>Featured Destinations</h1>
+        <div class="destination-grid">
+            <div class="destination-card">
+                <img src="../assets/images/Andaman1.jpg" alt="Andaman Islands" class="destination-img">
+                <div class="destination-content">
+                    <h3>Andaman Islands</h3>
+                    <p>Pristine beaches and crystal clear waters</p>
+                    <span class="price">Starting from ₹16,900</span>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="../assets/images/Himachal1.jpg" alt="Himachal Pradesh" class="destination-img">
+                <div class="destination-content">
+                    <h3>Himachal Pradesh</h3>
+                    <p>Snow-capped mountains and scenic valleys</p>
+                    <span class="price">Starting from ₹12,900</span>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="../assets/images/Kerala-trn-img.jpg" alt="Kerala" class="destination-img">
+                <div class="destination-content">
+                    <h3>Kerala</h3>
+                    <p>Backwaters and lush greenery</p>
+                    <span class="price">Starting from ₹11,800</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <div id="feedback">
     <div class="contact">
         <div class="contact-conatiner">
@@ -221,7 +402,7 @@
     </div>
 </div>
 <br><br>
-<script src="../assets/js/scripts.js"></script>
+<script src="../assets/js/script.js"></script>
 <div class="containercontact">
     <h2>Contact Us</h2>
     <form id="contactForm" method="post" action="process_contact.php">
@@ -236,9 +417,9 @@
 
         <button type="submit" id="contactbutton">Send Message</button>
     </form>
-    <div id="confirmation-message"></div>
+                    <div id="confirmation-message"></div>
 </div>
-<script src="../assets/js/scripts.js"></script>
+<script src="../assets/js/script.js"></script>
             <!--==================== SPONSORS ====================-->
             
             <section class="sponsor sectionsponsor section">
@@ -287,9 +468,9 @@
       <img src="../assets/images/img13.webp" style="width: 100%;">
       <img src="../assets/images/img14.webp" style="width: 100%;">
       <img src="../assets/images/img15.jpg" style="width: 100%;">
-      <img src="../assets/images/img16.cms" style="width: 100%;">
+      <img src="../assets/images/img16.jpg" style="width: 100%;">
       <img src="../assets/images/img17.webp" style="width: 100%;">
-      <img src="../assets/images/img18.cms" style="width: 100%;">
+      <img src="../assets/images/img18.jpg" style="width: 100%;">
       
     </div>
     <div class="column">
@@ -301,82 +482,67 @@
   </div>
 <br>
         <!--==================== FOOTER ====================-->
-        <footer class="footer section">
-            <div class="footer__container container grid">
-                <div class="footer__content grid">
-                    <div class="footer__data">
-                        <h3 class="footer__title">Travel</h3>
-                        <p class="footer__description">Travel you choose the <br> destination, 
-                            we offer you the <br> experience.
-                        </p>
-                        <div>
-                            <a href="https://www.facebook.com/" target="_blank" class="footer__social">
-                                <i class="ri-facebook-box-fill"></i>
+        <footer class="footer__container">
+            <div class="footer__data">
+                <div class="footer__content">
+                    <div>
+                        <h3 class="footer__title">Shreedevi Travellers</h3>
+                        <p class="footer__description">Your trusted travel partner since 1949. We offer the best travel experiences with professional service and unforgettable memories.</p>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-link">
+                                <i class="fa fa-facebook"></i>
                             </a>
-                            <a href="https://twitter.com/" target="_blank" class="footer__social">
-                                <i class="ri-twitter-fill"></i>
+                            <a href="#" class="footer__social-link">
+                                <i class="fa fa-twitter"></i>
                             </a>
-                            <a href="https://www.instagram.com/" target="_blank" class="footer__social">
-                                <i class="ri-instagram-fill"></i>
+                            <a href="#" class="footer__social-link">
+                                <i class="fa fa-instagram"></i>
                             </a>
-                            <a href="https://www.youtube.com/" target="_blank" class="footer__social">
-                                <i class="ri-youtube-fill"></i>
+                            <a href="#" class="footer__social-link">
+                                <i class="fa fa-linkedin"></i>
                             </a>
                         </div>
                     </div>
-    
-                    <div class="footer__data">
-                        <h3 class="footer__subtitle">About</h3>
-                        <ul>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">About Us</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">Features</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">New & Blog</a>
-                            </li>
+
+                    <div>
+                        <h3 class="footer__title">Quick Links</h3>
+                        <ul class="footer__links">
+                            <li><a href="index.html" class="footer__link">Home</a></li>
+                            <li><a href="aboutus.html" class="footer__link">About Us</a></li>
+                            <li><a href="booking.html" class="footer__link">Book Now</a></li>
+                            <li><a href="login.html" class="footer__link">Login</a></li>
                         </ul>
                     </div>
-    
-                    <div class="footer__data">
-                        <h3 class="footer__subtitle">Company</h3>
-                        <ul>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">Team</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">Plan y Pricing</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">Become a member</a>
-                            </li>
+
+                    <div>
+                        <h3 class="footer__title">Contact Info</h3>
+                        <ul class="footer__links">
+                            <li><i class="fa fa-phone"></i> IND toll free: 8002 444 686</li>
+                            <li><i class="fa fa-phone"></i> US toll free: 8552 543 444</li>
+                            <li><i class="fa fa-envelope"></i> info@shreedevitravellers.com</li>
+                            <li><i class="fa fa-map-marker"></i> Store Location</li>
                         </ul>
                     </div>
-    
-                    <div class="footer__data">
-                        <h3 class="footer__subtitle">Support</h3>
-                        <ul>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">FAQs</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">Support Center</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="" class="footer__link">Contact Us</a>
-                            </li>
+
+                    <div>
+                        <h3 class="footer__title">Services</h3>
+                        <ul class="footer__links">
+                            <li><a href="#" class="footer__link">Leisure Travel</a></li>
+                            <li><a href="#" class="footer__link">Business Travel</a></li>
+                            <li><a href="#" class="footer__link">Incentive Travel</a></li>
+                            <li><a href="#" class="footer__link">Customized Tours</a></li>
                         </ul>
                     </div>
                 </div>
+            </div>
 
-                <div class="footer__rights">
-                    <p class="footer__copy">&#169; 2021 Shreedevi. All rigths reserved.</p>
-                    <div class="footer__terms">
-                        <a href="#" class="footer__terms-link">Terms & Agreements</a>
-                        <a href="#" class="footer__terms-link">Privacy Policy</a>
-                    </div>
+            <div class="footer__rights">
+                <div class="footer__copy">
+                    <p>&copy; 2024 Shreedevi Travellers. All rights reserved.</p>
+                </div>
+                <div class="footer__terms">
+                    <a href="#" class="footer__terms-link">Privacy Policy</a>
+                    <a href="#" class="footer__terms-link">Terms of Service</a>
                 </div>
             </div>
         </footer>

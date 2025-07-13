@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <title>About us</title>
     <style>
 h1{
@@ -10,15 +13,10 @@ h1{
 }
 html{
     scroll-behavior: smooth;
-    scroll-padding-top:30px;
-}
-header{
-    background-color: #333;
-    color: white;
-    font-family:'Poppins', sans-serif;
+    scroll-padding-top:200px;
 }
 body{
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(yess.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../assets/images/yess.jpg);
     background-position: center;
     background-size: cover;
     background-position: 0;
@@ -28,14 +26,15 @@ body{
 .about{
     height: auto;
     width: 80%;
-    padding:10px;
-    margin-left:150px;
+    max-width: 1200px;
+    padding: 30px;
+    margin: 32px auto;
     background-color: rgb(188, 210, 210);
     background-position: center;
     background-size: cover;
-    border-radius: 0.9%;
+    border-radius: 15px;
     justify-content: center;
-    margin-top: 32px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .secondnav{
@@ -56,20 +55,238 @@ button:hover{
     background-color: grey;
     color: bisque;
 }
+
+/* Footer Styles */
+.footer__container {
+    background-color: #333;
+    color: #f2f2f2;
+    padding: 40px 0 20px 0;
+    margin-top: 50px;
+}
+
+.footer__data {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 30px;
+    margin-bottom: 30px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+.footer__title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer__description {
+    margin-bottom: 15px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.footer__social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer__social-link {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.footer__social-link:hover {
+    color: #007bff;
+}
+
+.footer__links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__links li {
+    margin-bottom: 10px;
+}
+
+.footer__link {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+    color: #007bff;
+}
+
+.footer__rights {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-top: 1px solid #555;
+    margin-top: 20px;
+}
+
+.footer__copy p {
+    color: #ccc;
+    margin: 0;
+}
+
+.footer__terms {
+    display: flex;
+    gap: 20px;
+}
+
+.footer__terms-link {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer__terms-link:hover {
+    color: #007bff;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    .footer__content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer__data {
+        margin: 0 20px;
+    }
+    
+    .footer__rights {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer__container {
+        padding: 30px 0 15px 0;
+    }
+    
+    .footer__data {
+        margin: 0 15px;
+    }
+    
+    .footer__rights {
+        padding: 15px 20px;
+    }
+}
+
+/* Fix for search container positioning on about page */
+.search-container {
+    position: sticky !important;
+    top: 130px !important;
+    z-index: 999 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px 20px !important;
+}
+
+.search-container h4 {
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: 16px !important;
+}
+
+.search-container #booking {
+    margin: 0 !important;
+    padding: 8px 20px !important;
+    font-size: 12px !important;
+    border-radius: 20px !important;
+    background-color: #fff !important;
+    color: #ff0000 !important;
+    border: 2px solid #ccc !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.search-container #booking:hover {
+    background-color: #8a2424 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+@media screen and (max-width: 1000px) {
+    .search-container {
+        top: 150px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search-container {
+        top: 180px !important;
+        padding: 8px 15px !important;
+    }
+    
+    .search-container h4 {
+        font-size: 14px !important;
+    }
+    
+    .search-container #booking {
+        padding: 6px 15px !important;
+        font-size: 11px !important;
+    }
+}
 </style>
 </head>
 <body>
-    <a href="index.html"><button>Back</button></a>
-    <div class="about">
-        <center><div class="secondnav">
+    <header>
+        <div class="firstnav">
+            <nav>
+                <ul>
+                    <li><i class="fa fa-phone" style="color: red;"></i>IND toll free :- 8002 444 686</li>
+                    <li><i class="fa fa-phone" style="color: red;"></i>US toll free :- 8552 543 444</li>
+                    <li><i class="fa fa-home" style="color: red;"></i><a href="https://maps.app.goo.gl/BDZ3EAMExXeW2Rcd9">Store location</a></li>
+                </ul>
+                <div class="login">
+                    <a href="getstarted.html" target="_blank" class="btn" action="logout.php" method="post">Logout</a>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div class="secondnav">
             <img src="../assets/images/travellogo.png" style="height: 65px;">
-        </center>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="index.html#destination">DESTINATIONS</a></li>
+                <li><a href="index.html#offers">OFFERS</a></li>
+                <li><a href="index.html#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <div class="search-container">
+        <h4>*offer limited for booking </h4>
+        <a href="booking.html" target="_blank"><button id="booking"><h3>BOOK NOW</h3></button></a>
+    </div>
+    
+
+    <div class="about">
     <P>
     <h1>OUR ORGANISATION</h1>
 
 Shreedevi Travellers Limited (Formerly Shreedevi Travellers Pvt. Ltd.) is a step-down subsidiary of Fairfax Financial Holdings Group; held through its Indian listed subsidiary.  India is a leading travel and tourism company active across various travel segments including Leisure Travel, Incentive Travel and Business Travel.
 
-shreedevi Travellers was established in 1949. Since then, it has escorted lakhs of travelers across the globe for more than 70 years to various destinations around the world. It is one of the leaders in segments, namely Escorted Group Tours, Customised Holidays, Holidays of India and Incentive Travel amongst others. Shreedevi Travellers’s customer focus, innovation and operational excellence has not only tapped the existing market potential but has also created new markets through innovative packages. Its vast array of holiday services is taking holidaying to an entirely new level. A new age innovative holiday maker, Shreedevi Travellers strives to make holidays a priority for every Indian. Through investments in technology and with a strong online presence the company serves its customers through an omni-channel play.
+shreedevi Travellers was established in 1949. Since then, it has escorted lakhs of travelers across the globe for more than 70 years to various destinations around the world. It is one of the leaders in segments, namely Escorted Group Tours, Customised Holidays, Holidays of India and Incentive Travel amongst others. Shreedevi Travellers's customer focus, innovation and operational excellence has not only tapped the existing market potential but has also created new markets through innovative packages. Its vast array of holiday services is taking holidaying to an entirely new level. A new age innovative holiday maker, Shreedevi Travellers strives to make holidays a priority for every Indian. Through investments in technology and with a strong online presence the company serves its customers through an omni-channel play.
 <br>
 <h1>Leisure Travel</h1>
 Shreedevi Travellers has been the pioneer in the development of organized leisure travel in the Outbound and Domestic division. Its leisure segment includes offerings namely, Escorted Group Tours, Customised Holidays, Luxury Holidays and Holidays of India.
@@ -86,5 +303,72 @@ Business Travel is India's leading travel management company. With leading edge 
     </P>
 
 </div><br><br>
+
+    <!-- Footer Section -->
+    <footer class="footer__container">
+        <div class="footer__data">
+            <div class="footer__content">
+                <div>
+                    <h3 class="footer__title">Shreedevi Travellers</h3>
+                    <p class="footer__description">Your trusted travel partner since 1949</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="aboutus.html" class="footer__link">About Us</a></li>
+                        <li><a href="booking.html" class="footer__link">Book Now</a></li>
+                        <li><a href="login.html" class="footer__link">Login</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Contact Info</h3>
+                    <ul class="footer__links">
+                        <li><i class="fa fa-phone"></i> IND toll free: 8002 444 686</li>
+                        <li><i class="fa fa-phone"></i> US toll free: 8552 543 444</li>
+                        <li><i class="fa fa-envelope"></i> info@shreedevitravellers.com</li>
+                        <li><i class="fa fa-map-marker"></i> Store Location</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Services</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Leisure Travel</a></li>
+                        <li><a href="#" class="footer__link">Business Travel</a></li>
+                        <li><a href="#" class="footer__link">Incentive Travel</a></li>
+                        <li><a href="#" class="footer__link">Customized Tours</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__rights">
+            <div class="footer__copy">
+                <p>&copy; 2024 Shreedevi Travellers. All rights reserved.</p>
+            </div>
+            <div class="footer__terms">
+                <a href="#" class="footer__terms-link">Privacy Policy</a>
+                <a href="#" class="footer__terms-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/animations.js"></script>
 </body>
 </html>

@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Admin Panel</title>
     <style>
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
-    background-image: url("download.jpg");
+    background-image: url("../assets/images/download.jpg");
     background-size: cover;
     
 }
@@ -63,7 +66,40 @@ body {
 }
     </style>
 </head>
-<body><div class="glassy-effect"></div>
+<body>
+    <header>
+        <div class="firstnav">
+            <nav>
+                <ul>
+                    <li><i class="fa fa-phone" style="color: red;"></i>IND toll free :- 8002 444 686</li>
+                    <li><i class="fa fa-phone" style="color: red;"></i>US toll free :- 8552 543 444</li>
+                    <li><i class="fa fa-home" style="color: red;"></i><a href="https://maps.app.goo.gl/BDZ3EAMExXeW2Rcd9">Store location</a></li>
+                </ul>
+                <div class="login">
+                    <a href="getstarted.html" target="_blank" class="btn" action="logout.php" method="post">Logout</a>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div class="secondnav">
+            <img src="../assets/images/travellogo.png" style="height: 65px;">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="index.html#destination">DESTINATIONS</a></li>
+                <li><a href="index.html#offers">OFFERS</a></li>
+                <li><a href="index.html#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <div class="search-container">
+        <h4>*offer limited for booking </h4>
+        <a href="booking.html" target="_blank"><button id="booking"><h3>BOOK NOW</h3></button></a>
+    </div>
+    
+    <div class="glassy-effect"></div>
     <div class="admin-panel">
         <h2>Welcome to Admin Panel</h2>
         <div class="button-container">
@@ -73,5 +109,6 @@ body {
             <a href="bookingdetails.php" class="button">Booking table</a>
         </div>
     </div>
+    <script src="../assets/js/animations.js"></script>
 </body>
 </html>
